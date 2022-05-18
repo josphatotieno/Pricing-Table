@@ -1,0 +1,99 @@
+* {
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#pricingTable-wrapper {
+    padding: 50px;
+}
+
+.pricingTable-header {
+    margin-bottom: 40px;
+}
+
+.pricingTable-header h1 {
+    margin-bottom: 15px;
+}
+
+.pricingTable-header,
+.pricing-options {
+    text-align: center;
+}
+
+.pricing-options {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.pricing-options > div {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.pricing-options > div input {
+    margin-right: 7px;
+}
+
+.pricing-options > div:first-child {
+    margin-right: 20px;
+    color: rgb(20, 20, 218);
+}
+
+.pricing-tables {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+
+}
+
+.pricing-table {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #000;
+    padding: 30px 20px;
+}
+
+.pricing-table button {
+    border: 1px solid #bebcbc;
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    padding: 15px 0;
+    font-weight: bold;
+}
+
+.pricing-table:nth-child(2) {
+    border: 1px solid rgb(20, 20, 218);
+}
+
+.pricing-table:nth-child(2) button {
+    background-color: rgb(20, 20, 218);
+    color: #fff;
+}
+
+li {
+    list-style: none;
+}
+
+.pricing-title,
+.pricing-packages li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.price,
+.pricing-packages {
+    margin-bottom: 40px;
+}
+
+.fa {
+    margin-right: 10px;
+}
+
+.fa-check {
+    color: rgb(15, 247, 169);
+}
