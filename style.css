@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 * {
     margin: 0%;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: Montserrat,sans-serif;
 }
 
 #pricingTable-wrapper {
@@ -29,7 +35,6 @@
 
 .pricing-options > div {
     display: flex;
-    flex-direction: row-reverse;
     align-items: center;
 }
 
@@ -37,16 +42,18 @@
     margin-right: 7px;
 }
 
+.pricing-options > div input:checked + label {
+    color: rgb(20, 20, 218);
+}
+
 .pricing-options > div:first-child {
     margin-right: 20px;
-    color: rgb(20, 20, 218);
 }
 
 .pricing-tables {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 20px;
-
+    gap: 30px;
 }
 
 .pricing-table {
@@ -54,8 +61,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #000;
+    border: 2.5px solid #bebcbc;
     padding: 30px 20px;
+    box-shadow: 1px 3px 5px 4px rgba(0, 0, 0, .13);
 }
 
 .pricing-table button {
@@ -64,16 +72,46 @@
     background-color: #fff;
     color: #000;
     padding: 15px 0;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 .pricing-table:nth-child(2) {
-    border: 1px solid rgb(20, 20, 218);
+    border: 2.5px solid rgb(20, 20, 218);
+}
+
+.pricing-table:nth-child(2) .price span:first-child {
+    color: rgb(20, 20, 218);
 }
 
 .pricing-table:nth-child(2) button {
     background-color: rgb(20, 20, 218);
     color: #fff;
+}
+
+.pricing-table:nth-child(2) .pricing-title > p:first-child {
+    color: rgb(20, 20, 218);
+}
+
+.pricing-title > p:first-child,
+.price span:first-child {
+    font-size: 45px;
+}
+
+sup {
+    font-size: 23px;
+}
+
+.price {
+    display: flex;
+}
+
+.price span:first-child {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.price span:nth-child(2) {
+    align-self: flex-start;
 }
 
 li {
@@ -92,8 +130,22 @@ li {
 
 .fa {
     margin-right: 10px;
+    font-weight: 100;
 }
 
 .fa-check {
     color: rgb(15, 247, 169);
+    font-size: 25px;
+}
+
+.fa-times-circle-o {
+    color: rgb(241, 13, 13);
+    font-size: 25px;
+}
+
+
+@media (max-width: 768px) {
+    .pricing-tables {
+        grid-template-columns: 1fr
+    }
 }
